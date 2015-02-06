@@ -17,10 +17,8 @@ data_dates <- data[data$Date >= "2007-02-01" & data$Date <= "2007-02-02",]
 
 # Create the plot in the window
 hist(data_dates$Global_active_power, col = "Red", 
-     xlab = "Global Active Power (kilowatts)", cex.lab=1, cex.axis = 1, 
+     xlab = "Global Active Power (kilowatts)", cex.lab=.75, cex.axis = .75, 
      main = "Global Active Power")
-axis(1, c(0,2,4,6))
-axis(2, c(0, 200, 400, 600, 800, 1000, 1200))
 
 # Save the plot from the window to a png
 dev.copy(png, file = "plot1.png")
